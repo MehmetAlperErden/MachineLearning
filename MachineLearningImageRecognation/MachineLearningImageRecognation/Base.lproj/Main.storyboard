@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MachineLearningImageRecognation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HMS-Zf-yur">
+                                <rect key="frame" x="57" y="44" width="300" height="350"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj6-VZ-obT">
+                                <rect key="frame" x="20" y="444" width="374" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="66N-kT-o8f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l59-56-PDP">
+                                <rect key="frame" x="166" y="528" width="82" height="119"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ass-Fi-Vku"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fj6-VZ-obT" firstAttribute="centerX" secondItem="l59-56-PDP" secondAttribute="centerX" id="8bR-Cn-pq2"/>
+                            <constraint firstItem="HMS-Zf-yur" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="CFN-vN-2De"/>
+                            <constraint firstItem="Fj6-VZ-obT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="IRJ-it-jlO"/>
+                            <constraint firstItem="l59-56-PDP" firstAttribute="top" secondItem="Fj6-VZ-obT" secondAttribute="bottom" constant="27" id="L6B-CB-EuC"/>
+                            <constraint firstItem="Fj6-VZ-obT" firstAttribute="centerX" secondItem="HMS-Zf-yur" secondAttribute="centerX" id="QDp-wy-bUU"/>
+                            <constraint firstItem="Fj6-VZ-obT" firstAttribute="top" secondItem="HMS-Zf-yur" secondAttribute="bottom" constant="50" id="SAp-JO-HN3"/>
+                            <constraint firstItem="HMS-Zf-yur" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WJs-VL-ln3"/>
+                            <constraint firstItem="Fj6-VZ-obT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="444" id="bAi-hd-Rn2"/>
+                            <constraint firstItem="Fj6-VZ-obT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uYQ-FR-ATB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="HMS-Zf-yur" id="dvW-ah-Axd"/>
+                        <outlet property="resultLabel" destination="Fj6-VZ-obT" id="O2x-lb-MNy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
